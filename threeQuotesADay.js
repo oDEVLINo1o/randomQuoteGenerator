@@ -31,7 +31,7 @@ function randomNum (num) {
   // function to loop through each key value pair of the quotes object and push each randomly selected 
   // quote to the quoteArr veriable
   function chooseQuote() {
-    for (person in quotes) {
+    for (let person in quotes) {
       let index = randomNum(quotes[person].length);
       if (person === 'mohatmaGandhi') {
         quoteArr.push(`Mohatma Gandhi quote: ${quotes[person][index]}`);

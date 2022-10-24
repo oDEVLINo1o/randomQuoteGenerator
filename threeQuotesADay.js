@@ -1,3 +1,9 @@
+let buttonA = document.getElementById('genQuote');
+let quoteA = document.getElementById('quote1');
+let quoteB = document.getElementById('quote2');
+let quoteC = document.getElementById('quote3');
+
+
 
 // random number generator
 function randomNum (num) {
@@ -44,9 +50,13 @@ function randomNum (num) {
       }
     }
     // joins the quoteArr to output a string and adds 2 new lines between each quote
-    console.log(quoteArr.join('\n\n'));
+    //console.log(quoteArr.join('\n\n'));
+
+    quoteA.innerHTML = quoteArr[0];
+    quoteB.innerHTML = quoteArr[1];
+    quoteC.innerHTML = quoteArr[2];
+
   }
   // calls the chooseQuote function
-  chooseQuote();
-  
-  
+
+buttonA.addEventListener('click', chooseQuote);
